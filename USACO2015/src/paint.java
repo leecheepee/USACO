@@ -20,15 +20,15 @@ public class paint {
 	static void init() throws IOException{
 		in = new Scanner(new File("paint.in"));
 		out = new PrintWriter(new File("paint.out"));
-		fence = new boolean[101];
+		fence = new boolean[100];
 		a = in.nextInt(); b = in.nextInt();
 		c = in.nextInt(); d = in.nextInt();
 	}
 	static void solve() {
-		for(int i = a; i <=b; i++) {
+		for(int i = a; i <b; i++) {
 			fence[i] = true;
 		}
-		for(int i = c; i<=d; i++) {
+		for(int i = c; i<d; i++) {
 			fence[i] = true;
 		}
 		for(int i = 0; i < fence.length; i++) {
@@ -37,7 +37,7 @@ public class paint {
 			else
 				continue;
 		}
-		painted = count-1;
-		out.println(painted);
+		
+		out.println(count);
 	}
 }
